@@ -1,0 +1,11 @@
+.content-block {
+    background-color: navy;
+    color: white;
+    padding: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.footer {
+    border: 2px solid navy;
+    padding: 9px;
+}

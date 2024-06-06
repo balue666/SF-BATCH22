@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Get Candidate Record" icon-name="standard:user">
+        <div class="slds-var-m-horizontal_medium">
+            <template lwc:if={candidate.data}>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <div class="content-header">Basic Information</div>
+                        <div class="slds-var-m-top_x-small">
+                            <label>Candidate Name</label>
+                            <div>{candidate.data.fields.Name.value}</div>
+                        </div>
+                        <div class="slds-var-m-top_x-small">
+                            <label>Interview Date</label>
+                            <div>{candidate.data.fields.Interview_Date__c.value}</div>
+                        </div>
+                        <div class="slds-var-m-top_x-small">
+                            <label>Annual Salary</label>
+                            <div>{candidate.data.fields.Annual_Salary__c.value}</div>
+                        </div>
+                    </div>
+                    <div class="slds-col">
+                        <div class="content-header">Other Information</div>
+                        <div class="slds-var-m-top_x-small">
+                            <label>Email</label>
+                            <div>{candidate.data.fields.Email__c.value}</div>
+                        </div>
+                        <div class="slds-var-m-top_x-small">
+                            <label>Status</label>
+                            <div>{candidate.data.fields.Status__c.value}</div>
+                        </div>
+                        <div class="slds-var-m-top_x-small">
+                            <label>Joining Date</label>
+                            <div>{candidate.data.fields.Joining_Date__c.value}</div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

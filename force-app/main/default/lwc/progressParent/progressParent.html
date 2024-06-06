@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Progress Bar" icon-name="standard:apex_plugin">
+        <div class="slds-var-m-horizontal_medium">
+            <lightning-layout>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-combobox
+                        label="Select Size"
+                        options={sizeOptions}
+                        onchange={changeHandler}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-input
+                        type="number"
+                        label="Enter Progress Value"
+                        onchange={changeHandler}>
+                    </lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+
+            <!-- Call child and pass data -->
+            <c-progress-bar
+                prog-value={value}
+                prog-size={size}>
+            </c-progress-bar>
+        </div>
+    </lightning-card>
+</template>

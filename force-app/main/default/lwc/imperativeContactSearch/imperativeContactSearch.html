@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Contact Search" icon-name="standard:contact">
+        <div class="slds-var-m-horizontal_medium">
+            <lightning-input
+                type="search"
+                label="Enter a search key to find matching contacts"
+                onchange={handleSearch}>
+            </lightning-input>
+
+            <!-- display results -->
+            <div class="slds-var-m-top_small">
+                <template lwc:if={contacts}>
+                    <lightning-datatable
+                        key-field="Id"
+                        data={contacts}
+                        columns={columns}>
+                    </lightning-datatable>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

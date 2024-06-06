@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-var-m-vertical_small">
+        <template lwc:if={recipe}>
+            <div><strong>{recipe.Name}</strong></div>
+            <lightning-layout>
+                <lightning-layout-item size="5" padding="horizontal-small">
+                    <img src={recipe.Thumbnail__c} alt={recipe.Name}/>
+                </lightning-layout-item>
+                <lightning-layout-item size="7" padding="horizontal-small">
+                    <div><strong>Ingredients:</strong> {recipe.Ingredients__c}</div>
+                    <div><strong>Instructions:</strong> {recipe.Instructions__c}</div>
+                    <div><strong>Calories(Per Serving):</strong> {recipe.Calories_Per_Serving__c}</div>
+                    <div><strong>Rating:</strong> {recipe.Rating__c}</div>
+                </lightning-layout-item>
+            </lightning-layout>
+        </template>
+    </div>
+</template>

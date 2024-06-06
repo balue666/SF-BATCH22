@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Event Bubbling" icon-name="action:fallback">
+        <div class="slds-var-m-horizontal_medium">
+            <div>This is the Grand Parent Component!</div>
+            <c-parent-comp
+                onshow={showHandler}>
+            </c-parent-comp>
+        </div>
+    </lightning-card>
+</template>

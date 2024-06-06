@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Lead Source Picklist" icon-name="standard:contact">
+        <div class="slds-var-m-horizontal_medium">
+            <lightning-combobox
+                label="Select Lead Source"
+                options={options}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            <div class="slds-var-m-top_small">
+                Selected Value: {selectedValue}
+            </div>
+        </div>
+    </lightning-card>
+</template>

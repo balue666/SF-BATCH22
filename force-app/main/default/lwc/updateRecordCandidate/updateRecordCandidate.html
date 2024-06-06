@@ -1,0 +1,65 @@
+<template>
+    <lightning-card title="Update Candidate Record" icon-name="standard:user">
+        <div class="slds-var-m-horizontal_medium">
+            <!-- Render the form only when candidate.data is defined -->
+            <template lwc:if={candidate.data}>
+                <form>
+                    <!-- Candidate Name - Text -->
+                    <lightning-input
+                        type="text"
+                        label="Candidate Name"
+                        name="Name"
+                        value={candidate.data.fields.Name.value}
+                        onchange={changeHandler}>
+                    </lightning-input>
+
+                    <!-- Email - Email -->
+                    <lightning-input
+                        type="email"
+                        label="Email"
+                        name="Email__c"
+                        value={candidate.data.fields.Email__c.value}
+                        onchange={changeHandler}>
+                    </lightning-input>
+
+                    <!-- Is the Resume Good? - Checkbox -->
+                    <lightning-input
+                        type="checkbox"
+                        label="Is the Resume Good?"
+                        name="Is_the_Resume_Good__c"
+                        checked={candidate.data.fields.Is_the_Resume_Good__c.value}
+                        onchange={changeHandler}>
+                    </lightning-input>
+
+                    <!-- Interview Date - Date -->
+                    <lightning-input
+                        type="date"
+                        label="Interview Date"
+                        name="Interview_Date__c"
+                        value={candidate.data.fields.Interview_Date__c.value}
+                        onchange={changeHandler}>
+                    </lightning-input>
+
+                    <!-- Status - Picklist -->
+                    <lightning-combobox
+                        label="Status"
+                        options={statusOptions}
+                        name="Status__c"
+                        value={candidate.data.fields.Status__c.value}
+                        onchange={changeHandler}>
+                    </lightning-combobox>
+
+                    <!-- Save button -->
+                    <div class="slds-align_absolute-center slds-var-m-top_medium">
+                        <lightning-button
+                            label="Update Candidate"
+                            variant="brand"
+                            onclick={updateRecordHandler}>
+                        </lightning-button>
+                    </div>
+
+                </form>
+            </template>
+        </div>
+    </lightning-card>
+</template>

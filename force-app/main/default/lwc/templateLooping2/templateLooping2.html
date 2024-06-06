@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Template Looping">
+        <div class="slds-var-m-horizontal_medium">
+            <template for:each={products} for:item="prod">
+                <div key={prod.Id} class="product-block">
+                    <strong>{prod.Name}</strong> <br/>
+                    {prod.Brand}, {prod.Category} <br/>
+                    USD {prod.Price}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

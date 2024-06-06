@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Candidate Form" icon-name="standard:user">
+        <div class="slds-var-m-horizontal_medium">
+            <lightning-record-form
+                object-api-name={objectName}
+                record-id={recordId}
+                fields={fields}
+                mode="view"
+                columns="2">
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

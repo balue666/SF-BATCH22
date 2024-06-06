@@ -1,0 +1,16 @@
+<template>
+    <template lwc:if={carouselInfo}>
+        <lightning-carousel>
+            <template for:each={carouselInfo} for:item="car">
+                <lightning-carousel-image
+                    key={car.src}
+                    src={car.src}
+                    header={car.header}
+                    description={car.description}
+                    alternative-text={car.alternativeText}
+                    href={car.href}>
+                </lightning-carousel-image>
+            </template>
+        </lightning-carousel>
+    </template>
+</template>

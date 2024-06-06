@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Wired Apex" icon-name="standard:opportunity">
+        <div class="slds-var-m-horizontal_medium">
+            <template lwc:if={opps}>
+                <lightning-layout multiple-rows> <!-- allows you to build a layout with multiple rows (no scroll bar)-->
+                    <template for:each={opps} for:item="opp">
+                        <lightning-layout-item size="4" padding="around-small" key={opp.Id}>
+                            <div style="background-color: aliceblue;">
+                                <strong>{opp.Name}</strong> <br/>
+                                {opp.StageName}, {opp.Amount} <br/>
+                                {opp.Type} <br/>
+                                {opp.CloseDate}
+                            </div>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+            </template>
+        </div>
+    </lightning-card>
+</template>

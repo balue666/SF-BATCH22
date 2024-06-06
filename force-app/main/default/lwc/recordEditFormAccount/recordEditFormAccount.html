@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Account Edit Form" icon-name="standard:account">
+        <div class="slds-var-m-horizontal_medium">
+            <lightning-record-edit-form
+                object-api-name={objectName}
+                record-id={recordId}
+                onsuccess={successHandler}>
+                <lightning-messages></lightning-messages>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <div>Basic Information</div>
+                        <lightning-input-field field-name={fields.name}></lightning-input-field>
+                        <lightning-input-field field-name={fields.industry}></lightning-input-field>
+                        <lightning-input-field field-name={fields.rating}></lightning-input-field>
+                    </div>
+                    <div class="slds-col">
+                        <div>Other Information</div>
+                        <lightning-input-field field-name={fields.type}></lightning-input-field>
+                        <lightning-input-field field-name={fields.revenue}></lightning-input-field>
+                        <lightning-input-field field-name={fields.website}></lightning-input-field>
+                    </div>
+                </div>
+                <!-- cancel & save buttons -->
+                <div class="slds-align_absolute-center slds-var-m-top_medium">
+                    <lightning-button
+                        label="Cancel"
+                        type="reset"
+                        class="slds-var-m-right_x-small"
+                        variant="neutral">
+                    </lightning-button>
+                    <lightning-button
+                        label="Save"
+                        type="submit"
+                        variant="brand">
+                    </lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

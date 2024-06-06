@@ -1,0 +1,10 @@
+.message-availble{
+    background-color: lightgreen;
+    padding: 12px;
+    border-radius: 6px;
+}
+.message-unavailable{
+    background-color: red;
+    padding: 12px;
+    border-radius: 6px;
+}

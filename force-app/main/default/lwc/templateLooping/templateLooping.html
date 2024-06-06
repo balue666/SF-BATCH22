@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Template Looping">
+        <div class="slds-var-m-horizontal_medium">
+            <!-- display heading in bold -->
+            <div><strong>FRUITS:</strong></div>
+
+            <!-- display fruits -->
+            <template for:each={fruits} for:item="fruit">
+                <div key={fruit}>{fruit}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

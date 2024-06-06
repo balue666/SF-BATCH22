@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Get Picklist Values" icon-name="standard:account">
+        <div class="slds-var-m-horizontal_medium">
+            <lightning-combobox
+                label="Select Industry"
+                onchange={changeHandler}
+                options={industryOptions}>
+            </lightning-combobox>
+
+            <div>{selectedIndustry}</div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="C2P Communication" icon-name="action:add_relationship">
+        <div class="slds-var-m-horizontal_medium">
+            <lightning-button
+                label="Show Modal"
+                variant="success"
+                onclick={showHandler}>
+            </lightning-button>
+            <div>{receivedMsg}</div>
+            <template lwc:if={showModal}>
+                <c-modal-child onclose={closeHandler}></c-modal-child>
+            </template>
+        </div>
+    </lightning-card>
+</template>

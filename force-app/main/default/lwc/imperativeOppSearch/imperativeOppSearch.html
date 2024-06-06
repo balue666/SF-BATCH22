@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Opportunity Search" icon-name="standard:opportunity">
+        <div class="slds-var-m-horizontal_medium">
+            <!-- display combo box -->
+            <lightning-combobox
+                label="Select a Stage to see the Opportunities"
+                options={stageOptions}
+                onchange={handleSearch}>
+            </lightning-combobox>
+
+            <!-- display search results -->
+            <div class="slds-var-m-top_medium">
+                <template lwc:if={opps}>
+                    <lightning-layout multiple-rows>
+                        <template for:each={opps} for:item="opp">
+                            <lightning-layout-item size="4" key={opp.Id} padding="around-small">
+                                <div class="layout-block">
+                                    <strong>{opp.Name}</strong> <br/>
+                                    {opp.StageName}, {opp.Amount} <br/>
+                                    {opp.Type} <br/>
+                                    {opp.CloseDate}
+                                </div>
+                            </lightning-layout-item>
+                        </template>
+                    </lightning-layout>
+                </template>
+                <template lwc:else>
+                    <div>{info}</div>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

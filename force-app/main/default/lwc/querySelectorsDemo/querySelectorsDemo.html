@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Query Selectors" icon-name="action:bug">
+        <div class="slds-var-m-horizontal_medium">
+            <p>This is a paragraph tag!</p>
+            <template for:each={fruits} for:item="fruit">
+                <div class="child" key={fruit}>{fruit}</div>
+            </template>
+
+            <lightning-button
+                label="Click Me"
+                variant="brand-outline"
+                onclick={clickHandler}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

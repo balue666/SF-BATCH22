@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Slider" icon-name="standard:slider">
+        <lightning-button
+            label="Reset Slider"
+            slot="actions"
+            variant="brand-outline"
+            onclick={resetHandler}>
+        </lightning-button>
+        <div class="slds-var-m-horizontal_medium">
+            <lightning-input
+                type="number"
+                label="Enter volume"
+                onchange={changeHandler}>
+            </lightning-input>
+            <div class="slds-var-m-top_small">
+                <c-slider-comp val={volume}></c-slider-comp>
+            </div>
+        </div>
+    </lightning-card>
+</template>
